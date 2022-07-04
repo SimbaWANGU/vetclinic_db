@@ -1,8 +1,6 @@
 # curriculum-databases-projects-template
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
-
+- The Microverse curriculum-databases-projects-template was used to create this project. It contains SQL code for the project Vet Clinic.
 
 ## Getting Started
 
@@ -15,17 +13,12 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## Authors
 
-👤 **Author1**
+👤 **Simba WANGU**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@SimbaWANGU](https://github.com/SimbaWANGU)
+- Twitter: [@Simb_erella](https://twitter.com/Simb_erella)
+- LinkedIn: [Simba Wangulu](https://linkedin.com/in/simba-wangulu/)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
@@ -39,9 +32,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
 
 ## 📝 License
 
