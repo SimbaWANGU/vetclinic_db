@@ -1,4 +1,4 @@
-# curriculum-databases-projects-template
+# Vet Clinic
 
 - The Microverse curriculum-databases-projects-template was used to create this project. It contains SQL code for the project Vet Clinic.
 
