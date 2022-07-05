@@ -24,6 +24,11 @@ SELECT * FROM animals WHERE name NOT LIKE '%Gabumon%';
 /* Find all animals with a weight between 10.4kg and 17.3kg (including the animals with the weights that equals precisely 10.4kg or 17.3kg) */
 SELECT * FROM animals WHERE weight_kg >= '10.4' AND weight_kg <= '17.3';
 
+/* species to unspecified and rolling back*/
+BEGIN;
+UPDATE animals set species = 'unspecified';
+ROLLBACK;
+
 /* Update animals table column species in transaction and cpmmit */
 BEGIN;
 UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon%';
