@@ -23,3 +23,27 @@ SELECT * FROM animals WHERE name NOT LIKE '%Gabumon%';
 
 /* Find all animals with a weight between 10.4kg and 17.3kg (including the animals with the weights that equals precisely 10.4kg or 17.3kg) */
 SELECT * FROM animals WHERE weight_kg >= '10.4' AND weight_kg <= '17.3';
+
+/* Update animals table column species in transaction and cpmmit */
+BEGIN;
+UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon%';
+UPDATE animals SET species = 'pokemom' WHERE species IS NULL;
+SELECT * FROM animals;
+COMMIT;
+
+/* Delete all records in transaction and rollback */
+BEGIN;
+DELETE FROM animals;
+SELECT * FROM animals;
+ROLLBACK;
+
+/* */
+BEGIN;
+DELETE FROM animals WHERE date_of_birth > '2022-01-01';
+SAVEPOINT SAVEPOINT_NAME;
+
+UPDATE animals SET weight_kg = weight_kg * -1;
+ROLLBACK TO SAVEPOINT_NAME;
+
+UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0
+COMMIT;
