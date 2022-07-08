@@ -64,3 +64,14 @@ INSERT INTO species (name)
 UPDATE animals SET species_id = (SELECT species_id FROM species WHERE name LIKE '%Digimon%') WHERE name LIKE '%mon';
 
 UPDATE animals SET species_id = (SELECT species_id FROM species WHERE name LIKE '%Pokemon%') WHERE name NOT LIKE '%mon';
+
+/* Add ownsers to animals table*/
+UPDATE animals SET owners_id = (SELECT owners_id FROM owners WHERE full_name LIKE '%Smith%') WHERE name LIKE '%Agumon%';
+
+UPDATE animals SET owners_id = (SELECT owners_id FROM owners WHERE full_name LIKE '%Jennifer Orwell%') WHERE name LIKE '%Gabumon%' OR name LIKE '%Pikachu%';
+
+UPDATE animals SET owners_id = (SELECT owners_id FROM owners WHERE full_name LIKE '%Bob%') WHERE name LIKE '%Devimon%' OR name LIKE '%Plantmon%';
+
+UPDATE animals SET owners_id = (SELECT owners_id FROM owners WHERE full_name LIKE '%Melody Pond%') WHERE name LIKE '%Charmander%' OR name LIKE '%Squirtle%' OR name LIKE '%Blossom%';
+
+UPDATE animals SET owners_id = (SELECT owners_id FROM owners WHERE full_name LIKE '%Dean Winchester%') WHERE name LIKE '%Angemon%' OR name LIKE '%Boarmon%';
