@@ -71,3 +71,24 @@ SELECT species, MIN(weight_kg), MAX(weight_kg) FROM animals GROUP BY species;
 
 /*Average escape attempts*/
 SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth >= '1990-01-01' AND date_of_birth < '2000-12-31' GROUP BY species;
+
+/* Belong to Melody*/
+SELECT owners.full_name, animals.name FROM animals INNER JOIN owners ON animals.owners_id = owners.owners_id WHERE owners.full_name LIKE '%Melody%';
+
+/* animals that are pokemon species */
+SELECT animals.name, species.name AS species FROM animals INNER JOIN species ON animals.species_id = species.species_id WHERE species.name LIKE '%Pokemon%';
+
+/* list all owners and their animals */
+SELECT owners.full_name, animals.name AS animal_name FROM animals RIGHT JOIN owners ON animals.owners_id = owners.owners_id;
+
+/* how many animals are there per species*/
+SELECT species.name, COUNT(animals.name) FROM animals INNER JOIN species ON animals.species_id = species.species_id GROUP BY species.name;
+
+/* Digimon owned by Jennifer */
+SELECT owners.full_name, animals.name, animals.species_id FROM animals INNER JOIN owners ON owners.owners_id = animals.owners_id WHERE owners.full_name LIKE '%Jennifer%' AND animals.species_id = (SELECT species_id FROM species WHERE name LIKE '%Digimon%');
+
+/* Owned by Dean Winchester not escaped */
+SELECT owners.full_name, animals.name, animals.escape_attempts FROM animals INNER JOIN owners ON owners.owners_id = animals.owners_id WHERE owners.full_name LIKE '%Dean%' AND animals.escape_attempts = '0';
+
+/* Who owns the most animals */
+SELECT owners.full_name, COUNT(animals.name) FROM owners LEFT JOIN animals ON owners.owners_id = animals.owners_id GROUP BY owners.full_name ORDER BY COUNT(animals.name) DESC LIMIT 1;
