@@ -75,3 +75,5 @@ UPDATE animals SET owners_id = (SELECT owners_id FROM owners WHERE full_name LIK
 UPDATE animals SET owners_id = (SELECT owners_id FROM owners WHERE full_name LIKE '%Melody Pond%') WHERE name LIKE '%Charmander%' OR name LIKE '%Squirtle%' OR name LIKE '%Blossom%';
 
 UPDATE animals SET owners_id = (SELECT owners_id FROM owners WHERE full_name LIKE '%Dean Winchester%') WHERE name LIKE '%Angemon%' OR name LIKE '%Boarmon%';
+
+/**/
