@@ -1,6 +1,7 @@
 # Vet Clinic
 
 - The Microverse curriculum-databases-projects-template was used to create this project. It contains SQL code for the project Vet Clinic.
+![Vet Clinic ERD](https://user-images.githubusercontent.com/57634593/178769040-51234e37-00a3-42ac-b6d0-115066433e1f.png)
 
 ## Getting Started
 
